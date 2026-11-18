@@ -12,111 +12,61 @@
 <header class="page">
   <p class="eyebrow">Spacewise</p>
   <h1>Support</h1>
-  <p class="meta">Help with Spacewise for iPhone</p>
+  <p class="meta">Help with Spacewise: Photo &amp; Media Studio</p>
 </header>
 
 <div class="card">
   <h3>Get in touch</h3>
   <p>Email <a href="mailto:trankien.sk.1211@gmail.com?subject=Spacewise">trankien.sk.1211@gmail.com</a> and we will reply within a few business days.</p>
-  <p>To help us help you faster, please include your iPhone model, your iOS version, and the app version shown at the bottom of Settings in the app.</p>
+  <p>Please include your iPhone model, iOS version, and the Spacewise version shown at the bottom of Settings.</p>
 </div>
 
 <h2>Frequently asked questions</h2>
 
-<h3>Storage and deleting</h3>
+<h3>Media Optimizer &amp; Storage</h3>
 
 <details>
-  <summary>I deleted photos but my storage did not go down. Why?</summary>
-  <p>When you delete photos on iPhone, iOS moves them to the <strong>Recently Deleted</strong> album in the Photos app and keeps them there for about 30 days so you can recover them. The space only comes back once that album is emptied.</p>
-  <p>To reclaim it immediately, open <strong>Photos &rsaquo; Albums &rsaquo; Recently Deleted</strong>, then tap Select and Delete All. No app can skip this step — it is an iOS safety feature.</p>
+  <summary>How does Media Optimizer save space without deleting my photos?</summary>
+  <p><strong>Live &rarr; Still</strong> strips the hidden 3-second motion video clip attached to a Live Photo while saving the exact full-resolution still image (preserving EXIF capture date, GPS coordinates, and Favorite heart). <strong>PNG/RAW &rarr; HEIC</strong> converts heavy uncompressed or lossless files into Apple's efficient HEIC format only when at least 15% space is saved.</p>
+  <p>In both modes, Spacewise saves the optimized copy to Photos first, then asks whether you want to move the heavier originals to Recently Deleted.</p>
 </details>
 
 <details>
-  <summary>Is Spacewise free? Are there limits or ads?</summary>
-  <p>Yes, it is completely free. There are no in-app purchases, no subscriptions, no daily limits, and no advertising. Every feature is available to everyone.</p>
+  <summary>I deleted originals, why didn't my free iPhone storage rise right away?</summary>
+  <p>iOS moves deleted photos and videos into <strong>Photos &rsaquo; Albums &rsaquo; Recently Deleted</strong> for roughly 30 days as a safety net. To reclaim disk space immediately, open the Photos app, go to Recently Deleted, and empty that album.</p>
 </details>
 
 <details>
-  <summary>Can Spacewise delete something I wanted to keep?</summary>
-  <p>Nothing is deleted without your confirmation. The app always shows you the exact items first, and in Swipe Clean nothing is removed until you confirm at the end of the month.</p>
-  <p>Quick Clean only ever proposes genuinely safe picks — exact duplicates and screenshots older than 30 days. Blurry and merely similar photos are never selected for you.</p>
-  <p>If something does go wrong, deleted photos stay in Recently Deleted in the Photos app for about 30 days.</p>
+  <summary>How does Synchronized Zoom Compare work?</summary>
+  <p>Open <strong>Similar &amp; Duplicates</strong> or <strong>Bursts</strong> and tap <strong>Compare</strong> on any group. Pinch or drag on either photo to zoom (up to 5&times;) and pan both shots in lockstep, inspect their focus sharpness score, megapixel count, codec, and file size, then tap <strong>Keep Only A</strong> or <strong>Keep Only B</strong>.</p>
 </details>
 
-<h3>Permissions</h3>
+<h3>Encrypted Secret Folder</h3>
 
 <details>
-  <summary>Why does the app need access to my photos, contacts, or calendar?</summary>
-  <p>Each permission is only requested when you open the feature that needs it, and only after a screen explaining why. Photos access is needed to scan for duplicates and large files, Contacts to find duplicate contacts, and Calendars to list old events. You can decline any of them and the rest of the app keeps working.</p>
-  <p>Everything is analysed on your iPhone. Nothing is uploaded. See the <a href="../privacy/">Privacy Policy</a> for the full detail.</p>
+  <summary>How secure is the Secret Folder?</summary>
+  <p>Every photo, video, thumbnail, and manifest inside the Secret Folder is encrypted on disk using <strong>256-bit AES-GCM</strong> (Apple CryptoKit) under <code>FileProtectionType.complete</code> and excluded from backups. Photos are decrypted strictly in memory when viewed, and your PIN is verified via a salted HKDF-SHA256 digest stored only in this iPhone's Keychain.</p>
 </details>
-
-<details>
-  <summary>I tapped "Don't Allow" by mistake. How do I change it?</summary>
-  <p>Open the iOS <strong>Settings</strong> app, scroll down to <strong>Spacewise</strong>, and turn the permission back on. Then reopen the app.</p>
-</details>
-
-<details>
-  <summary>Does "Limited" photo access work?</summary>
-  <p>Yes. Spacewise works with both Full Access and Limited Access. With Limited Access it can only see the photos you have selected, so the scan results will cover those photos only. For a complete cleanup, Full Access is recommended.</p>
-</details>
-
-<h3>Contacts</h3>
-
-<details>
-  <summary>How do I undo a contact merge?</summary>
-  <p>Spacewise saves a backup of your contacts before every merge or delete. Open <strong>Settings &rsaquo; Contact backups</strong> in the app, pick the backup from before the change, and restore it.</p>
-</details>
-
-<h3>Secret Folder</h3>
 
 <details>
   <summary>I forgot my Secret Folder PIN. Can you reset it?</summary>
-  <p>No, and neither can we. The PIN is stored in the iOS Keychain on your iPhone only — it never reaches us, and there is no recovery code or back door. This is what keeps the folder genuinely private.</p>
-  <p>The only way to clear a forgotten PIN is to delete the app, which <strong>permanently erases everything inside the Secret Folder</strong>. Please choose a PIN you will remember, and export anything irreplaceable back to your photo library.</p>
+  <p>No. Because Spacewise operates 100% offline with zero servers or backdoors, we have no access to your PIN or encryption keys. Deleting the app is the only way to reset the folder, and doing so <strong>permanently erases all encrypted items inside it</strong>. Always export important items back to Photos before deleting Spacewise or switching iPhones.</p>
+</details>
+
+<h3>Permissions &amp; Contacts</h3>
+
+<details>
+  <summary>How do I undo a contact merge?</summary>
+  <p>Spacewise automatically saves a local <code>.vcf</code> backup before every merge or delete. Open <strong>Settings &rsaquo; Contact backups</strong> inside Spacewise to restore a previous snapshot.</p>
 </details>
 
 <details>
-  <summary>The keypad says I have to wait. What happened?</summary>
-  <p>After five wrong PIN entries in a row the keypad locks for 30 seconds. Wait for the timer to finish and try again.</p>
+  <summary>Does Spacewise ever connect to the internet or upload my photos?</summary>
+  <p>Never. Spacewise makes zero network connections, has no analytics or ad SDKs, and processes everything locally on your iPhone. Read our <a href="../privacy/">Privacy Policy</a> for complete details.</p>
 </details>
 
-<details>
-  <summary>Will my Secret Folder items be deleted if I delete the app?</summary>
-  <p>Yes. Items in the Secret Folder are stored inside the app, so removing the app removes them for good. Export anything you want to keep to your photo library before deleting Spacewise.</p>
-</details>
-
-<h3>Other tools</h3>
-
-<details>
-  <summary>Does the Speed Test send my data anywhere?</summary>
-  <p>The Speed Test is the only feature that uses the internet. It exchanges meaningless test data with Cloudflare's public speed test service in order to measure your connection. None of your photos, contacts, or calendar data is involved. If you never open it, the app makes no network connections at all.</p>
-</details>
-
-<details>
-  <summary>The Home Screen widget shows an old free-space figure.</summary>
-  <p>iOS decides how often widgets refresh in order to save battery, so the number can lag behind. Opening Spacewise updates it.</p>
-</details>
-
-<details>
-  <summary>Where did my compressed video go?</summary>
-  <p>The video compressor saves a smaller copy to your photo library and leaves the original untouched. You can then delete the original yourself if you are happy with the result.</p>
-</details>
-
-<details>
-  <summary>How do I turn the weekly reminder off?</summary>
-  <p>Open <strong>Settings</strong> in the app and switch off the cleaning reminder. You can also change the day and time there.</p>
-</details>
-
-<h3>Privacy</h3>
-
-<details>
-  <summary>Do you collect any data about me?</summary>
-  <p>No. Spacewise has no account system, no analytics, no advertising, and no third-party SDKs. We operate no server for the app and receive nothing from it. Full details are in the <a href="../privacy/">Privacy Policy</a>.</p>
-</details>
-
-<h2>Still stuck?</h2>
-<p>Email <a href="mailto:trankien.sk.1211@gmail.com?subject=Spacewise">trankien.sk.1211@gmail.com</a> with a description of the problem and, if you can, a screenshot. We read every message.</p>
+<h2>Still need help?</h2>
+<p>Email <a href="mailto:trankien.sk.1211@gmail.com?subject=Spacewise">trankien.sk.1211@gmail.com</a> anytime.</p>
 
 <footer class="page">
   <a href="../privacy/">Privacy Policy</a>
